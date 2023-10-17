@@ -1,0 +1,44 @@
+\chapter{My Topic of Presentations Here}
+\begin{quote}\it
+``This chapter contains work done by: ''
+\flushright{$-$Authors Blahh and Blahh}
+\end{quote}
+\label{chapter:mytopicofpresentationhere}
+
+Basic overview of what is to come:
+
+\section{Section A of work flow}
+Tell me what your going to tell me. 
+
+\subsection{Examples of a picture}
+Given a the following example: 
+
+I can include a picture like this: 
+\begin{center}
+\begin{figure}
+\centering
+\includegraphics[width=4in]{xkcdcomic}
+\caption{A cool picture from \url{www.xkcd.com}}
+\label{fig:xkcdcomic}
+\end{figure}
+\end{center}
+Note your pictures should be .png or .jpeg files if you are going to compile this document using pdflatex. 
+
+We can also reference code like this: 
+\begin{center}
+\verb' my single line of stuff '
+\end{center}
+
+\subsection{A block of code}
+Or we can put in a full block of code like this: 
+\begin{center}
+\begin{lstlisting}[caption={A block of code}]
+for i in range(10):
+    print(i)
+    y = y + x
+    
+def f(x):
+    y = x**2
+    return y    
+\end{lstlisting}
+\end{center}

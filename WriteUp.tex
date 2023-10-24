@@ -73,6 +73,44 @@ step, only one command needs to be run in order to unlock the bootloader and roo
 This command should prompt a confirmation screen to appear on the Android device. Once the operation is confirmed, the device should reboot automatically. If not, 
 then type "fastboot reboot".
 
+\section{Installing Linux}
+Once the device is rooted, installing Linux is a very straightforward process actually. The steps are as follows:
+
+\begin{enumerate}
+
+\item Connect to wifi
+
+\item Install BusyBox
+
+\item Install Linux Deploy
+
+\item Open BusyBox and tap Start (this ensures that root permissions are enabled)
+
+\item Tap Settings
+
+\item Choose a Linux Distribution
+
+\item Check the Enable box under GUI to view a Linux desktop
+
+\item Open Graphics and select VNC
+
+\item Choose the Desktop environment you want under GUI settings
+
+\item Find the User name and User password fields and edit them 
+
+\item Exit the menu and tap the three dots in the upper-right corner
+
+\item Select Install, then OK
+
+\end{enumerate}
+
+Once those steps are completed, Linux should be installed onto the device. The desktop environment can be viewed by installing VNC Viewer which 
+can be found on the Play Store. Press the start button in Linux Deploy to run Linux and then open VNC Viewer. Connect to localhost:5900 to view 
+the Linux desktop.
+
+And just like that, Linux is installed onto the tablet. That was a very simple process wasn't it? Or perhaps...maybe not...
+
 \section{Pitfalls to trying to load another operating system}
+
 
 \section{Advantages & Disadvantages}

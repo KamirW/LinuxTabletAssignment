@@ -30,7 +30,16 @@ Unlocking the bootloader is just another way of saying "root the device". There 
 \end{itemize}
 
 \subsection{Install Android SDK}
-Installing the Android SDK Platform Tools is the first step to rooting the device. These are a set of tools that allow a user to interact with the Android
+Installing the Android SDK Platform Tools is the first step to rooting the device. These are a set of tools that allow a developer to interact with the Android device.
+There are two main tools that are included in the SDK Platform Tools that will be useful in rooting the device: adb and fastboot. Adb stands for Android Debug Bridge and is 
+a command line tool that allows developers to communicate with the device. It actually allows access to a Unix shell in order to perform such an action. Fastboot is a tool that 
+interfaces with the Android platform. It can be used for things like accessing all of a device's partitions or loading the device independently of the operating system 
+(which will be useful in this particular case).
+
+****** INSERT A PICTURE OF THE ANDROID SDK PLATFORM TOOLS FOLDER ******
+
+\subsection{Enable USB Debugging and OEM Unlocking}
+The second step to rooting the device is enabling USB debugging. This is a setting that can be enabled on an Android device 
 
 \section{Pitfalls to trying to load another operating system}
 

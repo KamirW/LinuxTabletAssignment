@@ -62,8 +62,12 @@ It is within "Developer Options" that the aforementioned settings can be found.
 ****** PERHAPS INCLUDE A PICTURE OF THE DEVELOPER OPTIONS SCREEN ******
 
 \subsection{Boot Device to Fastboot Mode}
+The third step of rooting the device is booting into Fastboot Mode. In this step, the device will have to be connected to a computer. It is necessary to 
+open folder where the Android SDK Platform Tools were downloaded through the command line. Then, in order to boot the device into Fastboot Mode, type the command
+"adb reboot bootloader". At this point, the device should be in Fastboot Mode. This can be verified by typing the command "fastboot devices" in the command line.
+Again, Fastboot Mode allows to a Unix shell that gives the developer the ability to communicate with the device on a very low level.
 
-
+\subsection{Unlock Bootloader via Fastboot Command}
 
 \section{Pitfalls to trying to load another operating system}
 

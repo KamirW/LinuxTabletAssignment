@@ -5,8 +5,6 @@
 \end{quote}
 \label{chapter: Installing Linux onto a Tablet}
 
-# This is the basic overview section... delete this small comment at the end
-
 It is commonly known that tablets are like bigger versions of android phones. And an android phone is just like a small computer. So, following that string of logic, a tablet would then 
 just be a bigger computer than an android. With that being the case, is it then possible to put a computer operating system onto a tablet? Well, the short answer is yes, but it is certainly 
 no easy feat. This chapter will cover the steps to loading a different operating system onto a tablet, the barriers of such a task, and also the shortcomings and advantages to doing such 
@@ -19,7 +17,7 @@ useful when it comes to completely changing the operating system of the tablet. 
 have become increasingly hard to root in the recent years as technology has improved its security measures.
 
 \section{Unlocking the Bootloader}
-Unlocking the bootloader is just another way of saying "root the device". There are a several steps involved in rooting a device:
+Unlocking the bootloader is a necessary to be able to load the device with a system recovery and the operating system. There are a several steps involved in rooting a device:
 \begin{itemize}
 
 \item Install Android SDK
@@ -30,7 +28,7 @@ Unlocking the bootloader is just another way of saying "root the device". There 
 \end{itemize}
 
 \subsection{Install Android SDK}
-Installing the Android SDK Platform Tools is the first step to rooting the device. These are a set of tools that allow a developer to interact with the Android device.
+Installing the Android SDK Platform Tools is the first step to unlocking the bootloader. These are a set of tools that allow a developer to interact with the Android device.
 There are two main tools that are included in the SDK Platform Tools that will be useful in rooting the device: adb and fastboot. Adb stands for Android Debug Bridge and is 
 a command line tool that allows developers to communicate with the device. It actually allows access to a Unix shell in order to perform such an action. Fastboot is a tool that 
 interfaces with the Android platform. It can be used for things like accessing all of a device's partitions or loading the device independently of the operating system 
@@ -39,7 +37,7 @@ interfaces with the Android platform. It can be used for things like accessing a
 ****** INSERT A PICTURE OF THE ANDROID SDK PLATFORM TOOLS FOLDER ******
 
 \subsection{Enable USB Debugging and OEM Unlocking}
-The second step to rooting the device is enabling USB debugging. This is a setting that can be enabled on an Android device in order to move files between the device 
+The second step to unlocking the bootloader is enabling USB debugging. This is a setting that can be enabled on an Android device in order to move files between the device 
 and a computer. More specifically, enabling it allows the device to be recognized by the computer in adb mode. This makes it possible to boot the device in Fastboot mode. 
 Additionally, there is another setting that must be enabled in order to further progress in rooting the device. This setting is known as OEM Unlocking. It is 
 responsible for allowing the bootloader to be unlocked. In other words, it allows rooting to be possible on the device. Enabling this setting in particular is an integral
@@ -62,16 +60,23 @@ It is within "Developer Options" that the aforementioned settings can be found.
 ****** PERHAPS INCLUDE A PICTURE OF THE DEVELOPER OPTIONS SCREEN ******
 
 \subsection{Boot Device to Fastboot Mode}
-The third step of rooting the device is booting into Fastboot Mode. In this step, the device will have to be connected to a computer. It is necessary to 
+The third step to unlocking the bootloader is booting into Fastboot Mode. In this step, the device will have to be connected to a computer. It is necessary to 
 open folder where the Android SDK Platform Tools were downloaded through the command line. Then, in order to boot the device into Fastboot Mode, type the command
 "adb reboot bootloader". At this point, the device should be in Fastboot Mode. This can be verified by typing the command "fastboot devices" in the command line.
 Again, Fastboot Mode allows to a Unix shell that gives the developer the ability to communicate with the device on a very low level.
 
 \subsection{Unlock Bootloader via Fastboot Command}
-This is pretty much the final step to rooting the device (which ironically is the first step in installing a separate operating system onto the device). In this 
-step, only one command needs to be run in order to unlock the bootloader and root the device. Type the command "fastboot flashing unlock" into the command line. 
-This command should prompt a confirmation screen to appear on the Android device. Once the operation is confirmed, the device should reboot automatically. If not, 
-then type "fastboot reboot".
+This is pretty much the final step to unlocking the bootloader. In this step, only one command needs to be run in order to unlock the bootloader and root the device. 
+Type the command "fastboot flashing unlock" into the command line. This command should prompt a confirmation screen to appear on the Android device. 
+Once the operation is confirmed, the device should reboot automatically. If not, then type "fastboot reboot".
+
+\section{Flash the TWRP Custom Recovery}
+In order to load the device with a new operating system is to get a custom recovery. This can be done fairly simply by going to the XDA Developers forum. 
+Once there, search for the tablet device in question. XDA is a great resource for everything related to rooting, modding, and custom ROMs. It is here that 
+the instructions for how to get a custom recovery for the specified device will be found. Once found, download it and boot it into TWRP application. Again, 
+this process is done in order to have a copy of the firmware on the device with root access. Once the custom recovery is flashed onto the device, the device should 
+then be rooted. The device should be rebooted after this process.
+
 
 \section{Installing Linux}
 Once the device is rooted, installing Linux is a very straightforward process actually. The steps are as follows:
@@ -111,6 +116,10 @@ the Linux desktop.
 And just like that, Linux is installed onto the tablet. That was a very simple process wasn't it? Or perhaps...maybe not...
 
 \section{Pitfalls to trying to load another operating system}
-
+The process of installing linux onto a tablet as described above may seem straightfoward and fairly feasible, however there are many places where this 
+process fails. Many of the failures come with actually trying to root the device. One such example is finding the appropriate firmware for the tablet in use. 
+Some brands of tablets aren't popular enough for their firmware to be posted for people to download. That being the case, it would be impossible to root 
+the device in this scenario. This issue was the very one encountered when researching this topic. As such, the team was indeed not able to successfully root the 
+tablet in order to install a Linux environment onto the device. 
 
 \section{Advantages & Disadvantages}

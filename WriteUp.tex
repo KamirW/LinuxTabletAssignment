@@ -39,7 +39,31 @@ interfaces with the Android platform. It can be used for things like accessing a
 ****** INSERT A PICTURE OF THE ANDROID SDK PLATFORM TOOLS FOLDER ******
 
 \subsection{Enable USB Debugging and OEM Unlocking}
-The second step to rooting the device is enabling USB debugging. This is a setting that can be enabled on an Android device 
+The second step to rooting the device is enabling USB debugging. This is a setting that can be enabled on an Android device in order to move files between the device 
+and a computer. More specifically, enabling it allows the device to be recognized by the computer in adb mode. This makes it possible to boot the device in Fastboot mode. 
+Additionally, there is another setting that must be enabled in order to further progress in rooting the device. This setting is known as OEM Unlocking. It is 
+responsible for allowing the bootloader to be unlocked. In other words, it allows rooting to be possible on the device. Enabling this setting in particular is an integral
+part of being able to root the device. Usually, the user would need to go into "developer options" in their settings in order to find this setting. Since this process 
+doesn't change between devices, the steps to finding this setting are as follows: 
+
+\begin{itemize}
+
+\item Go to settings
+\item Tap About Device
+\item Locate the Build Number and tap it 7 times
+\item Return to the main Settings screen
+\item Go to System
+\item Tap Developer Options
+
+\end{itemize}
+
+It is within "Developer Options" that the aforementioned settings can be found.
+
+****** PERHAPS INCLUDE A PICTURE OF THE DEVELOPER OPTIONS SCREEN ******
+
+\subsection{Boot Device to Fastboot Mode}
+
+
 
 \section{Pitfalls to trying to load another operating system}
 

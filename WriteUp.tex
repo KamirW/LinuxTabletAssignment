@@ -66,10 +66,14 @@ open folder where the Android SDK Platform Tools were downloaded through the com
 "adb reboot bootloader". At this point, the device should be in Fastboot Mode. This can be verified by typing the command "fastboot devices" in the command line.
 Again, Fastboot Mode allows to a Unix shell that gives the developer the ability to communicate with the device on a very low level.
 
+\includegraphics[width=4in]{images/adbdevices}
+
 \subsection{Unlock Bootloader via Fastboot Command}
 This is pretty much the final step to unlocking the bootloader. In this step, only one command needs to be run in order to unlock the bootloader and root the device. 
 Type the command "fastboot flashing unlock" into the command line. This command should prompt a confirmation screen to appear on the Android device. 
 Once the operation is confirmed, the device should reboot automatically. If not, then type "fastboot reboot".
+
+\includegraphics[width=4in]{images/fastboot}
 
 \section{Flash the TWRP Custom Recovery}
 In order to load the device with a new operating system is to get a custom recovery. This can be done fairly simply by going to the XDA Developers forum. 
@@ -78,7 +82,7 @@ the instructions for how to get a custom recovery for the specified device will 
 this process is done in order to have a copy of the firmware on the device with root access. Once the custom recovery is flashed onto the device, the device should 
 then be rooted. The device should be rebooted after this process.
 
-#put image here
+\includegraphics[width=4in]{images/Capture}
 
 \section{Installing Linux}
 Once the device is rooted, installing Linux is a very straightforward process actually. The steps are as follows:
